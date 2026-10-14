@@ -74,10 +74,10 @@ const SOURCE_LABEL = {
   auxiliary: "proceso auxiliar",
 };
 const COL = {
-  input_tokens: "#254f47",
-  output_tokens: "#a0d573",
-  cache_read_tokens: "#cddbc2",
-  cache_creation_tokens: "#d4a96e",
+  input_tokens: "#231f20",
+  output_tokens: "#e0352b",
+  cache_read_tokens: "#c4c4c4",
+  cache_creation_tokens: "#a0a0a0",
 };
 const KEYS = Object.keys(COL);
 const LABEL = {
@@ -287,8 +287,8 @@ function Trend({ rows }) {
       >
         <defs>
           <linearGradient id="fill" x1="0" x2="0" y1="0" y2="1">
-            <stop offset="0%" stopColor="#b9dca1" stopOpacity=".55" />
-            <stop offset="100%" stopColor="#b9dca1" stopOpacity="0" />
+            <stop offset="0%" stopColor="#e0352b" stopOpacity=".18" />
+            <stop offset="100%" stopColor="#e0352b" stopOpacity="0" />
           </linearGradient>
         </defs>
         {[38, 104, 170].map((y) => (
@@ -298,7 +298,7 @@ function Trend({ rows }) {
             x2="645"
             y1={y}
             y2={y}
-            stroke="#edf0e9"
+            stroke="#e8e8e8"
             strokeDasharray="4 5"
           />
         ))}
@@ -308,7 +308,7 @@ function Trend({ rows }) {
             <polyline
               points={points}
               fill="none"
-              stroke="#43734c"
+              stroke="#e0352b"
               strokeWidth="2.7"
               strokeLinejoin="round"
             />
@@ -318,7 +318,7 @@ function Trend({ rows }) {
                 cx={45 + i * 40}
                 cy={170 - (v / max) * 132}
                 r="3"
-                fill="#43734c"
+                fill="#e0352b"
               >
                 <title>
                   {num(v)} tokens · intervalo {i + 1}
@@ -792,7 +792,7 @@ function App() {
                 <div
                   style={{
                     width: `${(total(p.rows) / Math.max(all, 1)) * 100}%`,
-                    background: ["#284e43", "#94bf6e", "#d1ad73", "#cad7c1"][
+                    background: ["#e0352b", "#231f20", "#a0a0a0", "#c4c4c4"][
                       i % 4
                     ],
                   }}
