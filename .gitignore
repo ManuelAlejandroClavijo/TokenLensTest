@@ -12,3 +12,4 @@ preview-data/
 *.sqlite3-shm
 .env
 .claude/settings.local.json
+tokenlens/
